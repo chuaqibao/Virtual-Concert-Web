@@ -11,7 +11,7 @@ Due to the COVID-19 restrictions, our concert is being hosted online on this vid
 
 ### How to Use
 
-Each user is allowed to login using their authenticated email once at a time to prevent multiple users from sharing the same "concert ticket". Users will not be allowed to log into the same account to watch the concert using across multiple devices/browsers.
+Each user is allowed to login using their authenticated email once at a time to prevent multiple users from sharing the same "concert ticket". Users will not be allowed to log into the same account to watch the concert across multiple devices/browsers.
 
 Upon logging in, the account will expire after 3 hours, as a one-time off "concert ticket".
 
