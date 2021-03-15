@@ -12,7 +12,6 @@ import SUTDLogo from '../assets/SUTDLogo.png'
 import SMULogo from '../assets/SMULogo.png'
 
 import BackgroundImage from '../assets/thumbnailx.jpeg'
-import file from "../assets/ProgrammeBooklet.pdf"
 
 export default function App() {
   let background = { backgroundImage: `url(${BackgroundImage})`}
