@@ -2,7 +2,7 @@
 
 This concert is jointly hosted by SUTD Chamber Ensemble and SMU Strings in 2021.
 
-Online Streaming Platform Link: https://guarded-waters-31420.herokuapp.com/stream
+Online Streaming Platform Link: 
 
 ## Description
 
