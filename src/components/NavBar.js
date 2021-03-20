@@ -15,7 +15,7 @@ function Booklet() {
 
     return (
         <div>
-            <Button variant="outline-secondary" onClick={showBooklet}>Programme Booklet</Button>
+            <Button variant="outline-light" onClick={showBooklet}>Programme Booklet</Button>
 
             <Modal size='lg' show={show} onHide={closeBooklet} animation={false}>
                 <Modal.Header closeButton>
@@ -65,7 +65,7 @@ export default function NavBar() {
                 <Navbar.Collapse className="justify-content-end">
                     <Nav className="mr-sm-2">
                         {/* Gallery */}
-                        <Button variant="outline-secondary" onClick={showGallery}>Gallery</Button>
+                        <Button variant="outline-light" onClick={showGallery}>Gallery</Button>
                         <p style={{ opacity: "0" }}>xx</p>
 
                         {/* Programme Booklet */}

@@ -25,3 +25,6 @@ yarn-error.log*
 #config
 /src/firebase.js
 .eslintcache
+
+#assets
+/src/assets
