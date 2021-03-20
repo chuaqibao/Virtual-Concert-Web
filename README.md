@@ -17,4 +17,4 @@ Upon logging in, the account will expire after 3 hours, as a one-time off "conce
 
 Written in Reactjs with Firebase authentication. Deployed using Heroku.
 
-The Firebase credentials file has been removed from this repository. 
+The Firebase credentials file as well as assets folder has been removed from this repository. 
