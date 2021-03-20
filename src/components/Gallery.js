@@ -94,7 +94,6 @@ class Gallery extends Component {
 
                 <div >
                     <Container className="d-flex justify-content-around flex-wrap">
-
                         {this.cards.map(card => (
                             <div>
                             <Card text="black" className=" text-center p-2" style={{ width: '18rem' }}>
@@ -109,8 +108,6 @@ class Gallery extends Component {
                         ))}
                     </Container>
                 </div>
-
-
             </div>
         )
     }
