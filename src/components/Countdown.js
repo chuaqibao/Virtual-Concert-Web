@@ -7,7 +7,7 @@ function Counter() {
 
     const classes = useStyles();
 
-    const difference = new Date(`${2021}-01-11`) - new Date();
+    const difference = new Date(`${2021}-05-07`) - new Date();
 
     const [seconds, setSeconds] = useState(Math.floor((difference / 1000) % 60))
     const [minutes, setMinutes] = useState(Math.floor((difference / 1000 / 60) % 60))
@@ -16,20 +16,20 @@ function Counter() {
   
     function updateTime() {
 
-        if (days== 0 && hours == 0 && minutes == 0 && seconds == 0) {
+        if (days=== 0 && hours === 0 && minutes === 0 && seconds === 0) {
 
         }
         else {
-            if (hours == 0 && minutes == 0 && seconds == 0) {
+            if (hours === 0 && minutes === 0 && seconds === 0) {
                 setDays(days => days - 1);
                 setHours(23)
                 setMinutes(59);
                 setSeconds(59);
-            } else if (minutes == 0 && seconds == 0) {
+            } else if (minutes === 0 && seconds === 0) {
                 setHours(hours => hours - 1);
                 setMinutes(59);
                 setSeconds(59);
-            } else if (seconds == 0) {
+            } else if (seconds === 0) {
                 setMinutes(minutes => minutes - 1);
                 setSeconds(59);
             } else{
@@ -64,7 +64,7 @@ function Counter() {
     const daysRounded = minTwoDigits(days);
 
 
-    return (<div className={classes.root}>
+    return (<div>
  
             <Grid className={classes.timeGrid} container spacing={0} justify="center">
 

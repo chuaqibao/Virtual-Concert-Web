@@ -43,6 +43,7 @@ export default function NavBar() {
             <Navbar bg="dark" variant="dark">
 
                 {/* Logo */}
+                {/* <Navbar.Brand href='/stream'> */}
                 <Navbar.Brand href='/stream'>
                     <img
                         src={SUTDLogo}
@@ -52,6 +53,7 @@ export default function NavBar() {
                         alt="SUTD Logo"
                     />
                 </Navbar.Brand>
+                {/* <Navbar.Brand href='/stream'> */}
                 <Navbar.Brand href='/stream'>
                     <img
                         src={SMULogo}
@@ -65,11 +67,11 @@ export default function NavBar() {
                 <Navbar.Collapse className="justify-content-end">
                     <Nav className="mr-sm-2">
                         {/* Gallery */}
-                        <Button variant="outline-light" onClick={showGallery}>Gallery</Button>
-                        <p style={{ opacity: "0" }}>xx</p>
+                        {/* <Button variant="outline-light" onClick={showGallery}>Gallery</Button>
+                        <p style={{ opacity: "0" }}>xx</p> */}
 
                         {/* Programme Booklet */}
-                        <Booklet/>
+                        {/* <Booklet/> */}
                     </Nav>
                 </Navbar.Collapse>
 
