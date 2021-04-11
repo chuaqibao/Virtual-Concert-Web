@@ -31,7 +31,22 @@ export const useStyles = makeStyles(theme => ({
         alignContent:"center",
         textAlign: 'center',
         opacity:0.65,
-        borderRadius: 100,
+        borderRadius: 1200,
+
+        '@media (max-width: 450px)': {
+            minWidth: 120.73,
+            maxWidth: 120.73,
+        },
+
+        '@media (max-width: 350px)': {
+            minWidth: 100.73,
+            maxWidth: 100.73,
+        },
+
+        '@media (max-width: 300px)': {
+            minWidth: 80.73,
+            maxWidth: 80.73,
+        }
     },
     numBox: {
         color:"white",
@@ -45,15 +60,45 @@ export const useStyles = makeStyles(theme => ({
         alignItems:"center",
         alignContent:"center",
         textAlign: 'center',
+
+        '@media (max-width: 450px)': {
+            minWidth: 120.73,
+            maxWidth: 120.73,
+        },
+
+        '@media (max-width: 350px)': {
+            minWidth: 100.73,
+            maxWidth: 100.73,
+        },
+
+        '@media (max-width: 300px)': {
+            minWidth: 80.73,
+            maxWidth: 80.73,
+        }
         
     },
     timeNumber: {
         fontSize:50,
         fontWeight:"bold",
         paddingBottom:5,
+
+        '@media (max-width: 450px)': {
+            fontSize: 40
+        },
+
+        '@media (max-width: 350px)': {
+            fontSize: 30
+        },
+
+        // galaxy fold: width = 280
+        '@media (max-width: 300px)': {
+            fontSize: 16
+        }
+
     },
     timeWords: {
         fontSize: 22,
         outlineColor: "black"
     }
+
 }));

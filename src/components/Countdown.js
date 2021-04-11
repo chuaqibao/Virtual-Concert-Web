@@ -98,7 +98,7 @@ function Counter() {
                         </div> 
                     </Grid>
                     <Grid item className={classes.numBox}>
-                        <span className={classes.timeWords}>Mins</span> 
+                        <span className={classes.timeWords}>Minutes</span> 
                     </Grid>
 
                 </Box>
@@ -109,7 +109,7 @@ function Counter() {
                         </div> 
                     </Grid>
                     <Grid item className={classes.numBox}>
-                        <span className={classes.timeWords}>Sec</span> 
+                        <span className={classes.timeWords}>Seconds</span> 
                     </Grid>
 
                 </Box>

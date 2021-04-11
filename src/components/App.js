@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useLayoutEffect, useState } from "react"
 
 import { Container } from "react-bootstrap"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
@@ -28,8 +28,9 @@ function Routers() {
   )
 }
 
-function Body() {
-  let background = { backgroundImage: `url(${BackgroundImage})` }
+function Body(props) {
+  let background = { backgroundImage: `url(${BackgroundImage})`}
+
 
   return (
     <div style={background}>
