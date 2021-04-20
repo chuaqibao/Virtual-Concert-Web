@@ -44,6 +44,8 @@ export default function NavBar() {
 
                 {/* Logo */}
                 {/* <Navbar.Brand href='/stream'> */}
+                <p style={{ opacity: "0" }}>x</p>
+
                 <Navbar.Brand href='/stream'>
                     <img
                         src={SUTDLogo}

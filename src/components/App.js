@@ -29,7 +29,12 @@ function Routers() {
 }
 
 function Body(props) {
-  let background = { backgroundImage: `url(${BackgroundImage})`}
+  let background = { 
+    backgroundImage: `url(${BackgroundImage})`, 
+    backgroundRepeat  : 'no-repeat',
+    backgroundPosition: 'right',
+    backgroundColor: 'black'
+  }
 
 
   return (
