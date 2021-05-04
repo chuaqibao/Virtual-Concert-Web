@@ -1,4 +1,4 @@
-import { makeStyles, withTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles(theme => ({
     
@@ -30,7 +30,7 @@ export const useStyles = makeStyles(theme => ({
         alignItems:"center",
         alignContent:"center",
         textAlign: 'center',
-        opacity:0.65,
+        opacity:0.75,
         borderRadius: 1200,
 
         '@media (max-width: 450px)': {

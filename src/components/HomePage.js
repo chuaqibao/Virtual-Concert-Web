@@ -20,9 +20,9 @@ function HomePage(){
                         <h1 className='comingSoonHeader' >Coming soon!</h1>
                     </div>
 
-                    <div className="headerAlignment">
+                    {/* <div className="headerAlignment">
                         <h3 className="subHeader">The exciting journey of orchestral instrumental play blended with the soft touch of visual drama awaits you.</h3>
-                    </div>
+                    </div> */}
 
                 </Grid>
 

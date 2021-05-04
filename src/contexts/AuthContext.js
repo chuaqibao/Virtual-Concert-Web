@@ -34,7 +34,7 @@ export function AuthProvider({ children }) {
       setCurrentUser(auth.currentUser)
       { /* Delete account after 10s */ }
       //setTimeout(deleteUser, 10000)
-      history.push("/stream")
+      history.push("/home")
   }
 
   function deleteUser() {

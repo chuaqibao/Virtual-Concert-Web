@@ -1,0 +1,7 @@
+
+@media (max-width: 450px) {
+    .logo {
+        visibility: hidden;
+        position: absolute;
+    }
+}

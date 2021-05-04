@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom"
 import SUTDLogo from '../assets/SUTDLogo.png'
 import SMULogo from '../assets/SMULogo.png'
 
+import "./NavBar.css";
 
 function Booklet() {
 
@@ -46,7 +47,7 @@ export default function NavBar() {
                 {/* <Navbar.Brand href='/stream'> */}
                 <p style={{ opacity: "0" }}>x</p>
 
-                <Navbar.Brand href='/stream'>
+                <Navbar.Brand className='logo' href='/' >
                     <img
                         src={SUTDLogo}
                         width="120px"
@@ -58,7 +59,7 @@ export default function NavBar() {
 
                 <p style={{ opacity: "0" }}>xx</p>
                 {/* <Navbar.Brand href='/stream'> */}
-                <Navbar.Brand href='/stream'>
+                <Navbar.Brand className='logo' href='/' >
                     <img
                         src={SMULogo}
                         width="120px"
@@ -71,11 +72,11 @@ export default function NavBar() {
                 <Navbar.Collapse className="justify-content-end">
                     <Nav className="mr-sm-2">
                         {/* Gallery */}
-                        {/* <Button variant="outline-light" onClick={showGallery}>Gallery</Button>
-                        <p style={{ opacity: "0" }}>xx</p> */}
+                        <Button variant="outline-light" onClick={showGallery}>Gallery</Button>
+                        <p style={{ opacity: "0" }}>xx</p>
 
                         {/* Programme Booklet */}
-                        {/* <Booklet/> */}
+                        <Booklet/>
                     </Nav>
                 </Navbar.Collapse>
 
