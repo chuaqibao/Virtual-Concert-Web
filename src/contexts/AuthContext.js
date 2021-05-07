@@ -11,14 +11,17 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState()
+  //var mUser = null
   const [loading, setLoading] = useState(true)
   const history = useHistory()
   const value = {
+    //mUser,
     currentUser,
     login,
     deleteUser,
     checkUser
     }
+
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
@@ -33,19 +36,13 @@ export function AuthProvider({ children }) {
       const email = auth.currentUser.email
 
       setCurrentUser(auth.currentUser)
+      //mUser = auth.currentUser
 
-      // if (email !== 'sutdsmu.almamater@gmail.com') {
-      //   ref.push({ log: true })
-      //   ref.onDisconnect().remove()
-      // } else {
-      //   setTimeout(deleteUser, 7200000)
-      // }
-
-      const special = ['stl03@sph.com.sg', 'pvotcy@nus.edu.sg', 'trevsze@gmail.com', 'sutdsmu.almamater@gmail.com', 'adrian.chiang.is@gmail.com', 'jczhang@smu.edu.sg', 'lokekyd@gmail.com']
+      const special = ['stl03@sph.com.sg', 'trevsze@gmail.com', 'adrian.chiang.is@gmail.com', 'jczhang@smu.edu.sg', 'lokekyd@gmail.com', 'touliang@hotmail.com', 'phytanb@nus.edu.sg']
       
       if (!special.includes(email)) {
         /* Delete account after 5s */
-        //setTimeout(deleteUser, 5000)
+        //setTimeout(deleteUser, 10000)
 
         /* Delete account after 4h */
         setTimeout(deleteUser, 14400000)

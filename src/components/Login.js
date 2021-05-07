@@ -19,8 +19,8 @@ export default function Login() {
         setError("")
         setLoading(true)
 
-        const emailParse = emailRef.current.value.replace(".", "")
-
+        const emailParse = emailRef.current.value.replaceAll(".", "")
+        
         // find if snapshot exists
         const ref = firebase.database().ref(emailParse)
         ref.once("value", snapshot => {

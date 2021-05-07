@@ -10,7 +10,7 @@ function AlertDismissible() {
     const email = checkUser()
     var alertMsg = 'Your account will expire in 4 hours and you will be automatically logged out.'
 
-    console.log(email)
+    //console.log(email)
     if (((email === 'stl03@sph.com.sg') || (email === 'pvotcy@nus.edu.sg') || (email === 'trevsze@gmail.com'))) {
         alertMsg = 'You have unlimited access to our concert video.'
     } else if (email === 'sutdsmu.almamater@gmail.com') {
