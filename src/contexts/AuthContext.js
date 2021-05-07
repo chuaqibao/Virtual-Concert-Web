@@ -11,11 +11,11 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState()
-  const [mUser, setUser] = useState()
+  //const [mUser, setUser] = useState()
   const [loading, setLoading] = useState(true)
   const history = useHistory()
   const value = {
-    mUser,
+    //mUser,
     currentUser,
     login,
     deleteUser,
@@ -55,7 +55,7 @@ export function AuthProvider({ children }) {
   }
 
   function deleteUser() {
-    return mUser.delete()
+    return auth.currentUser.delete()
   }
 
   function checkUser() {
