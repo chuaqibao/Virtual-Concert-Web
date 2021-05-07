@@ -15,18 +15,20 @@ export default function Login() {
     async function handleSubmit(e) {
         e.preventDefault()
 
-        { /* Log In */ }
+        /* Log In */ 
         setError("")
         setLoading(true)
 
+        const emailParse = emailRef.current.value.replace(".", "")
+
         // find if snapshot exists
-        const ref = firebase.database().ref(passwordRef.current.value)
+        const ref = firebase.database().ref(emailParse)
         ref.once("value", snapshot => {
             if (!snapshot.exists()) {
                 firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE)
                 firebase.auth().signInWithEmailAndPassword(emailRef.current.value, passwordRef.current.value)
                     .then(success => {
-                        login(passwordRef.current.value)
+                        login(emailParse)
                     }).catch(function (error) {
                         // An error happened.
                         setError("Incorrect email or password")
@@ -57,7 +59,7 @@ export default function Login() {
                                 </Form.Group>
                                 <Button disabled={loading} variant="dark" className="w-100" type="submit">
                                     Log In
-                    </Button>
+                                </Button>
                             </Form>
                             <br></br>
                             <div className="w-100 text-center mt-2">

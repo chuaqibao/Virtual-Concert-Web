@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react"
+import React from "react"
 
 import { Container } from "react-bootstrap"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Login from './Login'
 import Stream from './Stream'
 import Gallery from './Gallery'
-import HomePage from './HomePage'
 
 import NavBar from './NavBar'
 import PrivateRoute from './PrivateRoute'
@@ -18,8 +17,7 @@ function Routers() {
   return (
     <AuthProvider>
       <Switch>        
-        <PrivateRoute path='/home' component={HomePage} />
-        {/* <PrivateRoute path='/stream' component={Stream} /> */}
+        <PrivateRoute path='/stream' component={Stream} />
         <Route path='/gallery' component={Gallery} />
         <Route exact path='/' component={Login} />
 

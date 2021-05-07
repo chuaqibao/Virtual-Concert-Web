@@ -17,6 +17,7 @@ export function AuthProvider({ children }) {
     currentUser,
     login,
     deleteUser,
+    checkUser
     }
 
   useEffect(() => {
@@ -27,18 +28,39 @@ export function AuthProvider({ children }) {
     return unsubscribe
   }, [])
 
-  function login(password) {
-      const ref = firebase.database().ref(password)
+  function login(emailParse) {
+      const ref = firebase.database().ref(emailParse)
+      const email = auth.currentUser.email
+
+      setCurrentUser(auth.currentUser)
+
+      // if (email !== 'sutdsmu.almamater@gmail.com') {
+      //   ref.push({ log: true })
+      //   ref.onDisconnect().remove()
+      // } else {
+      //   setTimeout(deleteUser, 7200000)
+      // }
+
+      const special = ['stl03@sph.com.sg', 'pvotcy@nus.edu.sg', 'trevsze@gmail.com', 'sutdsmu.almamater@gmail.com', 'adrian.chiang.is@gmail.com', 'jczhang@smu.edu.sg', 'lokekyd@gmail.com']
+      
+      if (!special.includes(email)) {
+        /* Delete account after 5s */
+        //setTimeout(deleteUser, 5000)
+
+        /* Delete account after 4h */
+        setTimeout(deleteUser, 14400000)
+      }
       ref.push({ log: true })
       ref.onDisconnect().remove()
-      setCurrentUser(auth.currentUser)
-      { /* Delete account after 10s */ }
-      //setTimeout(deleteUser, 10000)
-      history.push("/home")
+      history.push("/stream")
   }
 
   function deleteUser() {
     return auth.currentUser.delete()
+  }
+
+  function checkUser() {
+    return auth.currentUser.email
   }
 
   return (
