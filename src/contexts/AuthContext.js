@@ -11,11 +11,11 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState()
-  //var mUser = null
+  const [mUser, setUser] = useState()
   const [loading, setLoading] = useState(true)
   const history = useHistory()
   const value = {
-    //mUser,
+    mUser,
     currentUser,
     login,
     deleteUser,
@@ -26,6 +26,7 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
       setCurrentUser(user)
+
       setLoading(false)
     })
     return unsubscribe
@@ -36,13 +37,14 @@ export function AuthProvider({ children }) {
       const email = auth.currentUser.email
 
       setCurrentUser(auth.currentUser)
+      setUser(auth.currentUser)
       //mUser = auth.currentUser
 
       const special = ['stl03@sph.com.sg', 'trevsze@gmail.com', 'adrian.chiang.is@gmail.com', 'jczhang@smu.edu.sg', 'lokekyd@gmail.com', 'touliang@hotmail.com', 'phytanb@nus.edu.sg']
       
       if (!special.includes(email)) {
         /* Delete account after 5s */
-        //setTimeout(deleteUser, 10000)
+        //setTimeout(deleteUser, 5000)
 
         /* Delete account after 4h */
         setTimeout(deleteUser, 14400000)
@@ -53,7 +55,7 @@ export function AuthProvider({ children }) {
   }
 
   function deleteUser() {
-    return auth.currentUser.delete()
+    return mUser.delete()
   }
 
   function checkUser() {
