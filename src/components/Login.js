@@ -1,7 +1,10 @@
 import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert, CardGroup } from "react-bootstrap"
+
 import { useAuth } from "../contexts/AuthContext"
-import firebase from 'firebase'
+
+import firebase from 'firebase/app'
+import 'firebase/database'
 
 
 export default function Login() {
@@ -21,6 +24,8 @@ export default function Login() {
 
         const emailParse = emailRef.current.value.replaceAll(".", "")
         
+        //console.log(passwordRef.current.value)
+
         // find if snapshot exists
         const ref = firebase.database().ref(emailParse)
         ref.once("value", snapshot => {
@@ -31,6 +36,7 @@ export default function Login() {
                         login(emailParse)
                     }).catch(function (error) {
                         // An error happened.
+                        console.log(error)
                         setError("Incorrect email or password")
                     });
             }
