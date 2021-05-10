@@ -19,7 +19,6 @@ export function AuthProvider({ children }) {
   const value = {
     currentUser,
     login,
-    //deleteUser,
     checkUser
     }
 
@@ -40,11 +39,7 @@ export function AuthProvider({ children }) {
       const ref = firebase.database().ref(emailParse)
       const email = auth.currentUser.email
 
-      //console.log(email)
       setCurrentUser(auth.currentUser)
-
-
-      //const special = ['stl03@sph.com.sg', 'trevsze@gmail.com', 'adrian.chiang.is@gmail.com', 'jczhang@smu.edu.sg', 'lokekyd@gmail.com', 'touliang@hotmail.com', 'phytanb@nus.edu.sg']
       
       ref.push({ log: true })
       ref.onDisconnect().remove()
@@ -55,20 +50,7 @@ export function AuthProvider({ children }) {
       })
 
       history.push("/stream")
-      // if (!special.includes(email)) {
-      //   /* Delete account after 5s */
-      //   setTimeout(deleteUser, 5000)
-
-      //   /* Delete account after 4h */
-      //   //setTimeout(deleteUser, 14400000)
-      // }
-
   }
-
-  // function deleteUser() {
-  //   console.log("RUN")
-  //   return auth.deleteUser(uid)
-  // }
 
   function checkUser() {
     return auth.currentUser.email

@@ -10,7 +10,9 @@ function AlertDismissible() {
     const email = checkUser()
     var alertMsg = 'Your account will expire in 4 hours and you will be automatically logged out.'
 
-    if (((email === 'stl03@sph.com.sg') || (email === 'pvotcy@nus.edu.sg') || (email === 'trevsze@gmail.com'))) {
+    const special = ['tzuyang_lee@sutd.edu.sg', 'trevsze@gmail.com', 'adrian.chiang.is@gmail.com', 'jczhang@smu.edu.sg', 'lokekyd@gmail.com', 'touliang@hotmail.com', 'phytanb@nus.edu.sg', 'towchong@sutd.edu.sg', 'kkphoon@sutd.edu.sg']
+
+    if (special.includes(email)) {
         alertMsg = 'You have unlimited access to our concert video.'
     } else if (email === 'sutdsmu.almamater@gmail.com') {
         alertMsg = 'This account will expire at 9pm.'

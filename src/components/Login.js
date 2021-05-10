@@ -24,8 +24,6 @@ export default function Login() {
 
         const emailParse = emailRef.current.value.replaceAll(".", "")
         
-        //console.log(passwordRef.current.value)
-
         // find if snapshot exists
         const ref = firebase.database().ref(emailParse)
         ref.once("value", snapshot => {
